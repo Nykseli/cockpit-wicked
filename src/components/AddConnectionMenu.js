@@ -20,7 +20,8 @@
  */
 
 import React, { useState } from 'react';
-import { Dropdown, DropdownItem, DropdownToggle } from '@patternfly/react-core';
+import { Dropdown, DropdownItem } from '@patternfly/react-core';
+import { DropdownToggle } from '@patternfly/react-core/deprecated'
 import BridgeForm from './BridgeForm';
 import BondForm from './BondForm';
 import VlanForm from './VlanForm';

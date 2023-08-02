@@ -24,12 +24,11 @@ import { fetchEssidList } from '../context/network';
 import {
     Dropdown,
     DropdownItem,
-    DropdownPosition,
-    DropdownToggle,
     InputGroup,
     Spinner,
     TextInput
 } from '@patternfly/react-core';
+import { DropdownPosition, DropdownToggle } from '@patternfly/react-core/deprecated';
 import SearchIcon from '@patternfly/react-icons/dist/js/icons/search-icon';
 import ExclamationIcon from '@patternfly/react-icons/dist/js/icons/exclamation-circle-icon';
 import cockpit from 'cockpit';

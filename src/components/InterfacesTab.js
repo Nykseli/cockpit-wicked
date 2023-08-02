@@ -27,7 +27,7 @@ import cockpit from 'cockpit';
 import {
     useNetworkDispatch, useNetworkState, fetchInterfaces, fetchConnections, listenToInterfacesChanges
 } from '../context/network';
-import { Card, CardActions, CardBody, CardHeader, CardTitle, Text, TextVariants } from '@patternfly/react-core';
+import { Card, CardBody, CardHeader, CardTitle, Text, TextVariants } from '@patternfly/react-core';
 
 const _ = cockpit.gettext;
 
@@ -66,10 +66,7 @@ const InterfacesTab = () => {
     return (
         <>
             <Card>
-                <CardHeader>
-                    <CardActions>
-                        <AddConnectionMenu />
-                    </CardActions>
+                <CardHeader actions={{actions: <AddConnectionMenu />}}>
                     <CardTitle>
                         <Text component={TextVariants.h2}>{_("Interfaces")}</Text>
                     </CardTitle>

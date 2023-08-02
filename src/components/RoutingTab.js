@@ -24,7 +24,6 @@ import React, { useEffect } from 'react';
 import { useNetworkDispatch, useNetworkState, fetchRoutes } from '../context/network';
 import {
     Card,
-    CardActions,
     CardBody,
     CardTitle,
     CardHeader,
@@ -64,10 +63,7 @@ const RoutingTab = () => {
 
     return (
         <Card>
-            <CardHeader>
-                <CardActions>
-                    <AddRoute />
-                </CardActions>
+            <CardHeader actions={{actions: <AddRoute />}}>
                 <CardTitle>
                     <Text component={TextVariants.h2}>{_("User-defined Routes")}</Text>
                 </CardTitle>

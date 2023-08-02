@@ -12,12 +12,8 @@
       "plugin:jest/recommended",
       "plugin:jest/style"
     ],
-    "parser": "babel-eslint",
     "parserOptions": {
-        "ecmaVersion": "7",
-        "ecmaFeatures": {
-            "jsx": true
-        },
+        "ecmaVersion": "2022",
         "sourceType": "module"
     },
     "plugins": ["flowtype", "react", "react-hooks", "jest"],
