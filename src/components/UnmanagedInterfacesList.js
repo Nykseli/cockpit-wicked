@@ -22,12 +22,11 @@
 import cockpit from "cockpit";
 import React, { useState, useEffect, useCallback } from 'react';
 import {
-    Table,
     TableVariant,
     cellWidth,
     truncate
 } from '@patternfly/react-table';
-import { TableBody, TableHeader } from '@patternfly/react-table/deprecated'
+import { Table, TableBody, TableHeader } from '@patternfly/react-table/deprecated'
 import interfaceType from '../lib/model/interfaceType';
 import interfaceStatus from '../lib/model/interfaceStatus';
 

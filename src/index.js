@@ -22,6 +22,7 @@ import "../pkg/lib/patternfly/patternfly-5-cockpit.scss";
 import "core-js/stable";
 
 import React from "react";
+import "cockpit-dark-theme"
 import { createRoot } from "react-dom/client";
 import { Application } from './app.jsx';
 /*

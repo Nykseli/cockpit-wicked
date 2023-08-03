@@ -33,7 +33,7 @@ import {
     TextVariants,
     Title
 } from '@patternfly/react-core';
-import InfoCircleIcon from '@patternfly/react-icons/dist/js/icons/info-circle-icon';
+import InfoCircleIcon from '@patternfly/react-icons/dist/esm/icons/info-circle-icon';
 import RoutesList from './RoutesList';
 import AddRoute from './AddRoute';
 

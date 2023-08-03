@@ -18,7 +18,7 @@
  * To contact SUSE LLC about this file by physical or electronic mail, you may
  * find current contact information at www.suse.com.
  */
-// @ts-check
+
 import React from 'react';
 import cockpit from 'cockpit';
 import {

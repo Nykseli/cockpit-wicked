@@ -21,8 +21,8 @@
 
 import cockpit from "cockpit";
 import React, { useState, useEffect } from 'react';
-import { Table, TableVariant } from '@patternfly/react-table';
-import { TableBody, TableHeader } from '@patternfly/react-table/deprecated'
+import { TableVariant } from '@patternfly/react-table';
+import { Table, TableBody, TableHeader } from '@patternfly/react-table/deprecated'
 import { useNetworkDispatch, deleteRoute } from '../context/network';
 import RouteForm from './RouteForm';
 

@@ -29,8 +29,8 @@ import {
     TextInput
 } from '@patternfly/react-core';
 import { DropdownPosition, DropdownToggle } from '@patternfly/react-core/deprecated';
-import SearchIcon from '@patternfly/react-icons/dist/js/icons/search-icon';
-import ExclamationIcon from '@patternfly/react-icons/dist/js/icons/exclamation-circle-icon';
+import SearchIcon from '@patternfly/react-icons/dist/esm/icons/search-icon';
+import ExclamationIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-circle-icon';
 import cockpit from 'cockpit';
 
 const _ = cockpit.gettext;

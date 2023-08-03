@@ -22,15 +22,14 @@
 import cockpit from "cockpit";
 import React, { useState, useEffect, useCallback } from 'react';
 import {
-    Table,
     TableVariant,
     cellWidth,
     expandable,
     truncate
 } from '@patternfly/react-table';
-import { TableBody, TableHeader } from '@patternfly/react-table/deprecated'
+import { Table, TableBody, TableHeader } from '@patternfly/react-table/deprecated'
 import { Spinner } from '@patternfly/react-core';
-import AlertIcon from '@patternfly/react-icons/dist/js/icons/exclamation-triangle-icon';
+import AlertIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-triangle-icon';
 import InterfaceDetails from "./InterfaceDetails";
 import interfaceType from '../lib/model/interfaceType';
 import interfaceStatus from '../lib/model/interfaceStatus';

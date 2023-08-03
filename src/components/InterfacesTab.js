@@ -34,6 +34,7 @@ const _ = cockpit.gettext;
 const InterfacesTab = () => {
     const dispatch = useNetworkDispatch();
     const { interfaces, connections } = useNetworkState();
+   /*  console.log("interfaces: " + interfaces) */
 
     useEffect(() => {
         fetchConnections(dispatch);

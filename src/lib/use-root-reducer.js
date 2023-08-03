@@ -15,6 +15,7 @@ export default function useRootReducer(reducerMap) {
       ...lastState,
       [key]: reducerMap[key][0]
     }),
+    {}
   );
 
   const useRootReducerDispatch = useCallback(action => {

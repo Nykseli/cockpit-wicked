@@ -38,8 +38,8 @@ import {
     SplitItem,
 } from '@patternfly/react-core';
 
-import PlusIcon from '@patternfly/react-icons/dist/js/icons/plus-icon';
-import MinusIcon from '@patternfly/react-icons/dist/js/icons/minus-icon';
+import PlusIcon from '@patternfly/react-icons/dist/esm/icons/plus-icon';
+import MinusIcon from '@patternfly/react-icons/dist/esm/icons/minus-icon';
 import IPInput from './IPInput';
 
 const _ = cockpit.gettext;
