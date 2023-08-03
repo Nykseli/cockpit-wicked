@@ -90,7 +90,7 @@ const BridgeForm = ({ isOpen, onClose, connection }) => {
                     isDisabled={isEditing}
                     id="interface-name"
                     value={name}
-                    onChange={setName}
+                    onChange={(_e, val) => setName(val)}
                 />
                 <HelperText>
                     <HelperTextItem>
@@ -108,7 +108,7 @@ const BridgeForm = ({ isOpen, onClose, connection }) => {
                         label={name}
                         key={name}
                         isChecked={selectedPorts.includes(name)}
-                        onChange={handleSelectedPorts(name)}
+                        onChange={(_e, val) => handleSelectedPorts(name)(val)}
                     />
                 ))}
             </FormGroup>

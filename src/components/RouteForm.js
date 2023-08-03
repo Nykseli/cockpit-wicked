@@ -137,7 +137,7 @@ const RouteForm = ({ isOpen, onClose, route }) => {
                     isRequired
                     id="destination"
                     value={destination}
-                    onChange={setDestination}
+                    onChange={(_e, val) => setDestination(val)}
                 />
                 <HelperText>
                     <HelperTextItem>
@@ -166,7 +166,7 @@ const RouteForm = ({ isOpen, onClose, route }) => {
                 <Checkbox
                     id="isDefault"
                     isChecked={isDefault}
-                    onChange={setIsDefault}
+                    onChange={(_e, val) => setIsDefault(val)}
                 />
             </FormGroup>
 
@@ -181,7 +181,7 @@ const RouteForm = ({ isOpen, onClose, route }) => {
                     isRequired
                     id="gateway"
                     value={gateway}
-                    onChange={setGateway}
+                    onChange={(_e, val) => setGateway(val)}
                 />
             </FormGroup>
 
@@ -189,7 +189,7 @@ const RouteForm = ({ isOpen, onClose, route }) => {
                 label={_("Device")}
                 fieldId="device"
             >
-                <FormSelect value={device} onChange={setDevice} id="device">
+                <FormSelect value={device} onChange={(_e, val) => setDevice(val)} id="device">
                     {candidateInterfaces.map(({ name }, index) => (
                         <FormSelectOption key={index} value={name} label={name} />
                     ))}
@@ -203,7 +203,7 @@ const RouteForm = ({ isOpen, onClose, route }) => {
                 <TextInput
                     id="options"
                     value={options}
-                    onChange={setOptions}
+                    onChange={(_e, val) => setOptions(val)}
                 />
             </FormGroup>
         </ModalForm>

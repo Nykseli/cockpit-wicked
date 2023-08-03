@@ -97,7 +97,7 @@ const VlanForm = ({ isOpen, onClose, connection }) => {
                 fieldId="parentDevice"
             >
 
-                <FormSelect value={parentDevice} onChange={setParentDevice} id="parentDevice">
+                <FormSelect value={parentDevice} onChange={(_e, val) => setParentDevice(val)} id="parentDevice">
                     {candidateInterfaces.map(({ name }) => (
                         <FormSelectOption key={name} value={name} label={name} />
                     ))}
@@ -113,7 +113,7 @@ const VlanForm = ({ isOpen, onClose, connection }) => {
                     isRequired
                     id="vlan_id"
                     value={vlanId}
-                    onChange={setVlanId}
+                    onChange={(_e, val) => setVlanId(val)}
                     type="number"
                 />
                 <HelperText>
@@ -132,7 +132,7 @@ const VlanForm = ({ isOpen, onClose, connection }) => {
                     isRequired
                     id="interface-name"
                     value={name}
-                    onChange={updateName}
+                    onChange={(_e, val) => updateName(val)}
                 />
                 <HelperText>
                     <HelperTextItem>

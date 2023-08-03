@@ -84,7 +84,7 @@ const WirelessEssidSelect = ({ essid, setEssid, iface }) => {
 
     return (
         <InputGroup>
-            <TextInput id="essid" value={essid} onChange={setEssid} type="text" aria-label="Essid" />
+            <TextInput id="essid" value={essid} onChange={(_e, val) => setEssid(val)} type="text" aria-label="Essid" />
             <Dropdown
               position={DropdownPosition.right}
               isOpen={isOpen}

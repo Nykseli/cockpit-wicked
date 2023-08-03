@@ -111,7 +111,7 @@ const BondForm = ({ isOpen, onClose, connection }) => {
                     isDisabled={isEditing}
                     id="interface-name"
                     value={name}
-                    onChange={setName}
+                    onChange={(_e, val) => setName(val)}
                 />
                 <HelperText>
                     <HelperTextItem>
@@ -129,7 +129,7 @@ const BondForm = ({ isOpen, onClose, connection }) => {
                         label={name}
                         key={name}
                         isChecked={selectedInterfaces.includes(name)}
-                        onChange={handleSelectedInterfaces(name)}
+                        onChange={(_e, val) => handleSelectedInterfaces(name)(val)}
                     />
                 ))}
             </FormGroup>
@@ -139,7 +139,7 @@ const BondForm = ({ isOpen, onClose, connection }) => {
                 isRequired
                 fieldId="bonding-mode"
             >
-                <FormSelect value={mode} onChange={setMode} id="bonding-mode">
+                <FormSelect value={mode} onChange={(_e, val) => setMode(val)} id="bonding-mode">
                     {modeOptions.map((option, index) => (
                         <FormSelectOption key={index} {...option} />
                     ))}
@@ -155,7 +155,7 @@ const BondForm = ({ isOpen, onClose, connection }) => {
                     isRequired
                     id="bond-options"
                     value={options}
-                    onChange={setOptions}
+                    onChange={(_e, val) => setOptions(val)}
                 />
                 <HelperText>
                     <HelperTextItem>

@@ -128,7 +128,7 @@ const DnsSettingsForm = ({ isOpen, onClose, dns }) => {
                         isRequired
                         id="dns_policy"
                         value={policy}
-                        onChange={setPolicy}
+                        onChange={(_e, val) => setPolicy(val)}
                     />
                     <HelperText>
                         <HelperTextItem>
@@ -145,7 +145,7 @@ const DnsSettingsForm = ({ isOpen, onClose, dns }) => {
                         id="dns_search_list"
                         placeholder={_("example.com another.com")}
                         value={searchListInput}
-                        onChange={setSearchListInput}
+                        onChange={(_e, val) => setSearchListInput(val)}
                     />
                     <HelperText>
                         <HelperTextItem>
@@ -158,7 +158,7 @@ const DnsSettingsForm = ({ isOpen, onClose, dns }) => {
                 >
                     <IPInput
                         id="dns_nameserver_one"
-                        onChange={setNameserver1}
+                        onChange={(_e, val) => setNameserver1(val)}
                         placeholder={_("Nameserver IP")}
                         defaultValue={nameserver1}
                         onError={handleError}
@@ -176,7 +176,7 @@ const DnsSettingsForm = ({ isOpen, onClose, dns }) => {
                         id="dns_nameserver_two"
                         placeholder={_("Name Server IP")}
                         defaultValue={nameserver2}
-                        onChange={setNameserver2}
+                        onChange={(_e, val) => setNameserver2(val)}
                         onError={handleError}
                     />
                 </FormGroup>
@@ -185,7 +185,7 @@ const DnsSettingsForm = ({ isOpen, onClose, dns }) => {
                         id="dns_nameserver_three"
                         placeholder={_("Name Server IP")}
                         defaultValue={nameserver3}
-                        onChange={setNameserver3}
+                        onChange={(_e, val) => setNameserver3(val)}
                         onError={handleError}
                     />
                 </FormGroup>
