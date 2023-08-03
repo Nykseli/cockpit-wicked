@@ -27,7 +27,7 @@ import {
     expandable,
     truncate
 } from '@patternfly/react-table';
-import { Table, TableBody, TableHeader } from '@patternfly/react-table/deprecated'
+import { Table, TableBody, TableHeader } from '@patternfly/react-table/deprecated';
 import { Spinner } from '@patternfly/react-core';
 import AlertIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-triangle-icon';
 import InterfaceDetails from "./InterfaceDetails";

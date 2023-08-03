@@ -8,6 +8,7 @@
     "extends": [
       "eslint:recommended",
       "standard",
+      "standard-jsx",
       "standard-react",
       "plugin:jest/recommended",
       "plugin:jest/style"

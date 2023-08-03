@@ -63,7 +63,7 @@ const RoutingTab = () => {
 
     return (
         <Card>
-            <CardHeader actions={{actions: <AddRoute />}}>
+            <CardHeader actions={{ actions: <AddRoute /> }}>
                 <CardTitle>
                     <Text component={TextVariants.h2}>{_("User-defined Routes")}</Text>
                 </CardTitle>

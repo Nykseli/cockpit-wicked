@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { createConnection, mergeConnection } from '../lib/model/connections';
 import { createRoute } from '../lib/model/routes';
@@ -37,8 +36,6 @@ function NetworkProvider({ children }) {
         routes: React.useReducer(routesReducer, {}),
         dns: React.useReducer(dnsReducer, { searchList: [], nameServers: [] })
     });
-/*     console.log(state);
-    console.log(dispatch); */
 
     return (
         <NetworkStateContext.Provider value={state}>
@@ -215,12 +212,7 @@ function fetchDnsSettings(dispatch) {
  */
 function fetchInterfaces(dispatch) {
     networkClient().getInterfaces()
-            .then(result => {
-                console.log("fetchInterfaces result");
-                console.log(result)
-
-                dispatch({ type: actionTypes.SET_INTERFACES, payload: result })
-                })
+            .then(result => dispatch({ type: actionTypes.SET_INTERFACES, payload: result }))
             .catch(console.error);
 }
 
@@ -231,10 +223,7 @@ function fetchInterfaces(dispatch) {
  */
 function fetchConnections(dispatch) {
     networkClient().getConnections()
-            .then(result => {
-
-                dispatch({ type: actionTypes.SET_CONNECTIONS, payload: result });
-        })
+            .then(result => dispatch({ type: actionTypes.SET_CONNECTIONS, payload: result }))
             .catch(console.error);
 }
 

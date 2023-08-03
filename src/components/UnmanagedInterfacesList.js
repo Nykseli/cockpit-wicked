@@ -26,7 +26,7 @@ import {
     cellWidth,
     truncate
 } from '@patternfly/react-table';
-import { Table, TableBody, TableHeader } from '@patternfly/react-table/deprecated'
+import { Table, TableBody, TableHeader } from '@patternfly/react-table/deprecated';
 import interfaceType from '../lib/model/interfaceType';
 import interfaceStatus from '../lib/model/interfaceStatus';
 

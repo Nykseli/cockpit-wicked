@@ -34,7 +34,6 @@ const _ = cockpit.gettext;
 const InterfacesTab = () => {
     const dispatch = useNetworkDispatch();
     const { interfaces, connections } = useNetworkState();
-   /*  console.log("interfaces: " + interfaces) */
 
     useEffect(() => {
         fetchConnections(dispatch);
@@ -52,7 +51,6 @@ const InterfacesTab = () => {
         return (
             <Card>
                 <CardHeader>
-                    <CardActions />
                     <CardTitle>
                         <Text component={TextVariants.h2}>{_("Unmanaged Interfaces")}</Text>
                     </CardTitle>
@@ -67,7 +65,7 @@ const InterfacesTab = () => {
     return (
         <>
             <Card>
-                <CardHeader actions={{actions: <AddConnectionMenu />}}>
+                <CardHeader actions={{ actions: <AddConnectionMenu /> }}>
                     <CardTitle>
                         <Text component={TextVariants.h2}>{_("Interfaces")}</Text>
                     </CardTitle>

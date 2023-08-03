@@ -60,7 +60,6 @@ export function connectionsReducer(state, action) {
 export function interfacesReducer(state, action) {
     switch (action.type) {
     case actionTypes.SET_INTERFACES: {
-        console.log("SETTING INTERFACES!")
         return action.payload.reduce((all, ifaceData) => {
             const iface = createInterface(ifaceData);
             return { ...all, [iface.id]: iface };
