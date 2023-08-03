@@ -26,6 +26,8 @@ import {
     FormGroup,
     FormSelect,
     FormSelectOption,
+    HelperText,
+    HelperTextItem,
     TextInput
 } from '@patternfly/react-core';
 import { useNetworkDispatch, useNetworkState, addConnection, updateConnection } from '../context/network';
@@ -111,6 +113,11 @@ const BondForm = ({ isOpen, onClose, connection }) => {
                     value={name}
                     onChange={setName}
                 />
+                <HelperText>
+                    <HelperTextItem>
+                        {_("Please, provide the interface name (e.g., bond0)")}
+                    </HelperTextItem>
+                </HelperText>
             </FormGroup>
 
             <FormGroup
@@ -142,7 +149,7 @@ const BondForm = ({ isOpen, onClose, connection }) => {
             <FormGroup
                 label={_("Options")}
                 fieldId="bond-options"
-                helperText={_("Use this field to provide more options using the key=value format")}
+
             >
                 <TextInput
                     isRequired
@@ -150,6 +157,11 @@ const BondForm = ({ isOpen, onClose, connection }) => {
                     value={options}
                     onChange={setOptions}
                 />
+                <HelperText>
+                    <HelperTextItem>
+                        {_("Use this field to provide more options using the key=value format")}
+                    </HelperTextItem>
+                </HelperText>
             </FormGroup>
         </ModalForm>
     );

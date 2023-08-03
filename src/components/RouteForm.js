@@ -21,7 +21,7 @@
 
 import React, { useState, useEffect } from 'react';
 import cockpit from 'cockpit';
-import { Alert, Checkbox, FormGroup, FormSelect, FormSelectOption, TextInput } from '@patternfly/react-core';
+import { Alert, Checkbox, FormGroup, FormSelect, FormSelectOption, HelperText, HelperTextItem, TextInput } from '@patternfly/react-core';
 import { useNetworkDispatch, useNetworkState, addRoute, updateRoute } from '../context/network';
 import { isValidIP } from '../lib/utils';
 import ModalForm from './ModalForm';
@@ -111,10 +111,10 @@ const RouteForm = ({ isOpen, onClose, route }) => {
 
         return (
             <Alert
-              isInline
-              variant="danger"
-              aria-live="polite"
-              title={_("Route is not valid, please check it.")}
+                isInline
+                variant="danger"
+                aria-live="polite"
+                title={_("Route is not valid, please check it.")}
             >
                 {errors.map(({ key, message }) => <p key={key}>{message}</p>)}
             </Alert>
@@ -132,7 +132,6 @@ const RouteForm = ({ isOpen, onClose, route }) => {
                 isRequired
                 label={_("Destination")}
                 fieldId="destination"
-                helperText={_("Destination")}
             >
                 <TextInput
                     isRequired
@@ -140,6 +139,11 @@ const RouteForm = ({ isOpen, onClose, route }) => {
                     value={destination}
                     onChange={setDestination}
                 />
+                <HelperText>
+                    <HelperTextItem>
+                        {_("Destination")}
+                    </HelperTextItem>
+                </HelperText>
             </FormGroup>
         );
     };

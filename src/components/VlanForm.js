@@ -25,6 +25,8 @@ import {
     FormGroup,
     FormSelect,
     FormSelectOption,
+    HelperText,
+    HelperTextItem,
     TextInput,
 } from '@patternfly/react-core';
 import { useNetworkDispatch, useNetworkState, addConnection, updateConnection } from '../context/network';
@@ -106,7 +108,6 @@ const VlanForm = ({ isOpen, onClose, connection }) => {
                 label={_("VLAN ID")}
                 isRequired
                 fieldId="vlan_id"
-                helperText={_("Please, provide the VLAN ID (e.g., 10)")}
             >
                 <TextInput
                     isRequired
@@ -115,13 +116,17 @@ const VlanForm = ({ isOpen, onClose, connection }) => {
                     onChange={setVlanId}
                     type="number"
                 />
+                <HelperText>
+                    <HelperTextItem>
+                        helperText={_("Please, provide the VLAN ID (e.g., 10)")}
+                    </HelperTextItem>
+                </HelperText>
             </FormGroup>
 
             <FormGroup
                 label={_("Name")}
                 isRequired
                 fieldId="interface-name"
-                helperText={_("Please, provide the interface name (e.g., vlan10)")}
             >
                 <TextInput
                     isRequired
@@ -129,6 +134,11 @@ const VlanForm = ({ isOpen, onClose, connection }) => {
                     value={name}
                     onChange={updateName}
                 />
+                <HelperText>
+                    <HelperTextItem>
+                        {_("Please, provide the interface name (e.g., vlan10)")}
+                    </HelperTextItem>
+                </HelperText>
             </FormGroup>
         </ModalForm>
     );
