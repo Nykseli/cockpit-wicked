@@ -63,7 +63,7 @@ PREFIX=/usr DESTDIR=%{buildroot} make install
 appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/*
 
 # drop source maps, they are large and just for debugging
-find %{buildroot}%{_datadir}/cockpit/ -name '*.map' | xargs rm --verbose
+find %{buildroot}%{_datadir}/cockpit/ -name '*.map' | xargs --no-run-if-empty rm --verbose
 
 %files
 %doc README.md
